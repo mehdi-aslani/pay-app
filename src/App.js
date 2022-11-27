@@ -79,35 +79,6 @@ const App = () => {
       />
       <Container style={{ paddingBottom: "3.5vw" }}>
         <Routes>
-          <Route element={<PrivateRoute LogoutAction={logout} />}>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/user/change-password" element={<ChangePassword />} />
-            {getCookies("role") === "1" &&
-              <>
-                <Route path="/users/index" element={<Users />} />
-                <Route path="/users/create" element={<UserForm />} />
-                <Route path="/users/edit/:id" element={<UserForm />} />
-
-                <Route path="/services/index" element={<IsqiService />} />
-                <Route path="/services/create" element={<IsqiServiceForm />} />
-                <Route path="/services/edit/:id" element={<IsqiServiceForm />} />
-              </>}
-
-            <Route path="/invoices/index" element={<Invoices />} />
-            <Route path="/invoices/create" element={<InvoiceForm />} />
-            <Route path="/invoices/edit/:id" element={<InvoiceForm />} />
-
-            <Route path="/customers/index" element={<Customers />} />
-            {/* <Route path="/customers/create" element={<CustomerForm />} /> */}
-            {/* <Route path="/customers/edit/:id" element={<CustomerForm />} /> */}
-
-            <Route path="/tas/index" element={<Transactions />} />
-          </Route>
-
-          <Route path="/pay/:id" element={<Pay />} />
-          <Route path="/result/:id" element={<Result />} />
-          <Route path="/login" element={<Login LoginAction={login} />} />
           <Route path="/notfound" element={<NotFound />} />
           <Route path="*" element={<Navigate to="/notfound" />} />
         </Routes>
