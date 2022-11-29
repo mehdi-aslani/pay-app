@@ -1,5 +1,5 @@
-/* @import "~bootstrap-v4-rtl/dist/css/bootstrap-rtl.min.css"; */
-/* @import "./css/font/fonts.css"; */
+@import "~bootstrap-v4-rtl/dist/css/bootstrap-rtl.min.css";
+@import "./css/font/fonts.css";
 
 body,
 html {
